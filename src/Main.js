@@ -4,7 +4,7 @@ const Main = () => {
 
     return (
        <main>
-           <ItemListContainer greeting="Contador"/>
+           <ItemListContainer greeting="Cursos"/>
        </main>
     )
 }
