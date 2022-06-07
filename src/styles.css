@@ -47,3 +47,21 @@ html, body, #root {
     font-family: 'Arima Madurai', cursive;
     font-weight: 1500;
 }
+
+.carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+}
+
+.carrito:hover {
+    background: #6867ac;
+    border-radius: 30px;
+}
+
+main {
+    font-size: 5rem;
+}

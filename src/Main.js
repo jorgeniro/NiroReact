@@ -1,8 +1,10 @@
+import ItemListContainer from "./components/ItemListContainer"
+
 const Main = () => {
 
     return (
        <main>
-           <p>este es el Main</p>
+           <ItemListContainer greeting="Bienvenido!"/>
        </main>
     )
 }

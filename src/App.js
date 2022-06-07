@@ -2,14 +2,19 @@ import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
 import NavBar from './components/NavBar'
+import CartWidget from './components/CartWidget';
+import ItemListContainer from './components/ItemListContainer';
+
 // Fragment: es una etiqueta que no tiene nombre. NO SE ve en el DOM 
 const App  = () => {
     return (
         <> <div className='head'>
-            <Header/>
-            <NavBar/>
-        </div>   
+                <Header/>
+                <NavBar/>
+                <CartWidget/>
+            </div>   
             <Main/>
+            <ItemListContainer/>
             <Footer/>
         </>
     ) 
