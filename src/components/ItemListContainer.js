@@ -1,14 +1,27 @@
+import React, {useEffect, useState } from "react"
+import customFetch from "../utils/customFetch";
+import productos from "../utils/products";
+import ItemList from "./ItemList";
 
-import ItemCount from "./ItemCount"
-const onAdd = () => {}
-const ItemListContainer = ({ greeting }) => {
 
-    return (
-        <div>
-          <h2>{greeting}</h2>
-          <ItemCount stock={5} onAdd={onAdd} initial={1} />
-        </div>
-      )
+function ItemListContainer() {
+  console.log("CARGANDO CURSOS...");
+  const [items, setItems] = useState([])
+  useEffect(() => {
+    customFetch( 2000, productos)
+      .then(r => setItems(r))
+}, [items])
+
+console.log(items)
+
+  return (
+    <div className="container">
+     <ItemList products={items}/>
+    </div>
+  )
+
 }
+
+
 
 export default ItemListContainer
