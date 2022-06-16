@@ -1,8 +1,9 @@
-import ItemListContainer from './components/ItemListContainer';
-import NavBar from './components/NavBar';
 import Header from './Header';
-import Footer from './Footer';
+import NavBar from './components/NavBar';
 import CartWidget from './components/CartWidget';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import Footer from './Footer';
 
 
 
@@ -15,7 +16,8 @@ function App() {
            <CartWidget/>
         </div>
         <div>
-           <ItemListContainer/>  
+           <ItemListContainer saludo="greetings"/>  
+           <ItemDetailContainer/>
         </div>
            <Footer/>
         </>

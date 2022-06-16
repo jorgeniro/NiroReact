@@ -1,27 +1,29 @@
 import React, {useEffect, useState } from "react"
-import customFetch from "../utils/customFetch";
-import productos from "../utils/products";
 import ItemList from "./ItemList";
+import { traerProductos } from "../utils/products";
 
 
-function ItemListContainer() {
-  console.log("CARGANDO CURSOS...");
-  const [items, setItems] = useState([])
+const ItemListContainer = ({greetings}) => {
+  const [products, setProducts] = useState([])
+  
   useEffect(() => {
-    customFetch( 2000, productos)
-      .then(r => setItems(r))
-}, [items])
+    traerProductos()
+      .then((res) => {
+        setProducts(res);
+        })
+      .catch((error) => {
+          console.log(error);
+          });  
+}, [])
 
-console.log(items)
 
   return (
-    <div className="container">
-     <ItemList products={items}/>
+    <div className="">
+      <h2>{greetings}</h2>
+     <ItemList items={products}/>
     </div>
   )
 
 }
-
-
 
 export default ItemListContainer
