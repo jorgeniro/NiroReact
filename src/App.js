@@ -1,28 +1,18 @@
 import Header from './Header';
-import NavBar from './components/NavBar';
-import CartWidget from './components/CartWidget';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import Main from './Main';
 import Footer from './Footer';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
 function App() {
-     return (
-        <>       
-        <div className='head'>
-           <Header/>
-           <NavBar/>
-           <CartWidget/>
-        </div>
-        <div>
-           <ItemListContainer saludo="greetings"/>  
-           <ItemDetailContainer/>
-        </div>
-           <Footer/>
-        </>
-
-    ); 
+      return (
+         <BrowserRouter>      
+            <Header/>
+            <Main/>
+            <Footer/>
+         </BrowserRouter>
+      ); 
 }
 
 export default App
