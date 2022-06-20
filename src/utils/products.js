@@ -1,3 +1,5 @@
+
+
 export const productos = [
     {
         id: 1,
@@ -43,7 +45,7 @@ export const productos = [
         id: 6,
         name: "YOGA CENTRO",
         price: "500",
-        description: "Curso YOGA PARA TU CENTRO",
+        description: "No es ningún secreto que el yoga aporta múltiples beneficios y que se está posicionando como una de las rutinas de actividad física más consultadas y demandadas. Frente a frenéticas prácticas como el CrossFit o el HIIT, hay quien busca una disciplina más tranquila, que le permita desconectar y a la vez trabajar su cuerpo. El yoga es una opción perfecta en este supuesto, que combina respiración con espacios meditativos, a la vez que movimientos en forma de postura (asanas) encaminados también a fortalecer la musculatura",
         image: "curso6.jpg",
         stock: 5,
     },
@@ -81,14 +83,7 @@ export const productos = [
     }
 ]
 
-const producto = {
-    id: 6,
-    name: "YOGA PARA TU CENTRO",
-    price: "500",
-    description: "No es ningún secreto que el yoga aporta múltiples beneficios y que se está posicionando como una de las rutinas de actividad física más consultadas y demandadas. Frente a frenéticas prácticas como el CrossFit o el HIIT, hay quien busca una disciplina más tranquila, que le permita desconectar y a la vez trabajar su cuerpo. El yoga es una opción perfecta en este supuesto, que combina respiración con espacios meditativos, a la vez que movimientos en forma de postura (asanas) encaminados también a fortalecer la musculatura",
-    image: "curso6.jpg",
-    stock: 5,
-}
+
 
 export const traerProductos = () => {
     return new Promise((resolve, reject) => {
@@ -98,10 +93,12 @@ export const traerProductos = () => {
     });
 };
 
+const unItem = productos[0]
+
 export const traerProducto = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(producto);
+            resolve(unItem);
         }, 1000);
     });
 };

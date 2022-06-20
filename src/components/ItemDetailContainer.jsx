@@ -8,16 +8,21 @@ const ItemDetailContainer = () => {
   const [product, setProduct] = useState({})
 
   useEffect(() => {
-    traerProducto()
-      .then ((res) => {
-        setProduct(res);
+    setTimeout(() => {
+      traerProducto(1)
+      .then(product => {
+        setProduct(product)
       })
-      .catch ((error) => {
-        console.log(error);
-      });
-  }, []);
+    }, 2000)
+  }, [])
 
-  return <ItemDetail product={product} />;
+
+
+  return (
+            <div>
+              <ItemDetail product={product} />
+            </div>
+          );
   
 }
 

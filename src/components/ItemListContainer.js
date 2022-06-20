@@ -7,6 +7,8 @@ const ItemListContainer = ({greetings}) => {
   const [products, setProducts] = useState([])
   
   useEffect(() => {
+    setTimeout(() => {
+      
     traerProductos()
       .then((res) => {
         setProducts(res);
@@ -14,7 +16,9 @@ const ItemListContainer = ({greetings}) => {
       .catch((error) => {
           console.log(error);
           });  
-}, [])
+        }, 2000)
+      }, [])
+
 
 
   return (
