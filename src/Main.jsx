@@ -7,7 +7,7 @@ const Main = () => {
         <main className="main">
             <Routes>
                 <Route path="/" element={<ItemListContainer />} />
-                <Route path="/category/:id" element={<ItemListContainer />} />
+                <Route path="/category/:category" element={<ItemListContainer />} />
                 <Route path="/item/:id" element={<ItemDetailContainer />} />
             </Routes>
         </main>

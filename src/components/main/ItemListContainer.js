@@ -1,33 +1,44 @@
 import React, {useEffect, useState } from "react"
 import ItemList from "./ItemList";
-import {customFetch} from "../../utils/customFetch";
+import { productos} from "../../utils/products";
+import { useParams } from "react-router-dom"
 
 
-function ItemListContainer() {
+const Cargando = () => {
+  return (
+    <div className="container">
+      <h1>Cargando...</h1>
+    </div>
+  )
+}
+
+const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([])
+  const { category } = useParams()
+  const [cargando, setCargando] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => {
-      
-      customFetch()
-      .then((res) => {
-        setItems(res);
-        })
-      .catch((error) => {
-          console.log(error);
-          });  
-        }, 600)
-      }, [])
+    setCargando(true)
+    new Promise((res, rej) => {
+      setTimeout(() => {
+        res(category ? productos.filter((producto)=>{
+          return producto.category == category
+        }) : productos)
+      }, 2000)
+    })
+      .then(resultado => {
+        setItems(resultado)
+        setCargando(false)
+      })
+  }, [category])
 
-      if (items.length === 0) {
-        return <h1>Loading...</h1>
-      }
-      else {
-            return (
-            <div className="container">
-           <ItemList products={items}/>
-            </div>
-           )}
+
+
+  return (
+    <div className="container">
+      {cargando ? <Cargando /> : <ItemList items={items} />}
+    </div>
+  )
 }
 
 export default ItemListContainer

@@ -2,6 +2,7 @@ export const productos = [
     {
         id: 1,
         name: "YOGA PARA PRINCIPIANTES",
+        category: "principiante",
         price: "200",
         description: "Curso de YOGA PARA PRINCIPIANTES",
         image: "curso1.jpg",
@@ -10,6 +11,7 @@ export const productos = [
     {
         id: 2,
         name: "YOGA Y CHAKRAS",
+        category: "intermedio",
         price: "300",
         description: "Curso de YOGA Y CHAKRAS",
         image: "curso2.jpg",
@@ -18,6 +20,7 @@ export const productos = [
     {
         id: 3,
         name: "YOGA IYENGAR",
+        category: "avanzado",
         price: "400",
         description: "Curso de YOGA IYENGAR",
         image: "curso3.jpg",
@@ -26,6 +29,7 @@ export const productos = [
     {
         id: 4,
         name: "YOGA ANTI ESTRÉS",
+        category: "principiante",
         price: "500",
         description: "Curso YOGA ANTI ESTRÉS",
         image: "curso4.jpg",
@@ -34,6 +38,7 @@ export const productos = [
     {
         id: 5,
         name: "YOGA BOWSPRING",
+        category: "intermedio",
         price: "400",
         description: "Curso de YOGA BOWSPRING",
         image: "curso5.jpg",
@@ -42,6 +47,7 @@ export const productos = [
     {
         id: 6,
         name: "YOGA CENTRO",
+        category: "avanzado",
         price: "500",
         description: "No es ningún secreto que el yoga aporta múltiples beneficios y que se está posicionando como una de las rutinas de actividad física más consultadas y demandadas. Frente a frenéticas prácticas como el CrossFit o el HIIT, hay quien busca una disciplina más tranquila, que le permita desconectar y a la vez trabajar su cuerpo. El yoga es una opción perfecta en este supuesto, que combina respiración con espacios meditativos, a la vez que movimientos en forma de postura (asanas) encaminados también a fortalecer la musculatura",
         image: "curso6.jpg",
@@ -50,6 +56,7 @@ export const productos = [
     {
         id: 7,
         name: "YOGA BOWSPRING",
+        category: "principiante",
         price: "400",
         description: "Curso de YOGA BOWSPRING",
         image: "curso5.jpg",
@@ -58,6 +65,7 @@ export const productos = [
     {
         id: 8,
         name: "YOGA CENTRO",
+        category: "intermedio",
         price: "500",
         description: "Curso YOGA PARA TU CENTRO",
         image: "curso6.jpg",
@@ -66,6 +74,7 @@ export const productos = [
     {
         id: 9,
         name: "YOGA BOWSPRING",
+        category: "avanzado",
         price: "400",
         description: "Curso de YOGA BOWSPRING",
         image: "curso5.jpg",
@@ -74,6 +83,7 @@ export const productos = [
     {
         id: 10,
         name: "YOGA CENTRO",
+        category: "principiante",
         price: "500",
         description: "Curso YOGA PARA TU CENTRO",
         image: "curso6.jpg",
@@ -82,6 +92,7 @@ export const productos = [
     {
         id: 11,
         name: "YOGA PARA PRINCIPIANTES",
+        category: "intermedio",
         price: "200",
         description: "Curso de YOGA PARA PRINCIPIANTES",
         image: "curso1.jpg",
@@ -90,6 +101,7 @@ export const productos = [
     {
         id: 12,
         name: "YOGA Y CHAKRAS",
+        category: "avanzado",
         price: "300",
         description: "Curso de YOGA Y CHAKRAS",
         image: "curso2.jpg",
@@ -98,6 +110,7 @@ export const productos = [
     {
         id: 13,
         name: "YOGA IYENGAR",
+        category: "principiante",
         price: "400",
         description: "Curso de YOGA IYENGAR",
         image: "curso3.jpg",
@@ -106,6 +119,7 @@ export const productos = [
     {
         id: 14,
         name: "YOGA ANTI ESTRÉS",
+        category: "intermedio",
         price: "500",
         description: "Curso YOGA ANTI ESTRÉS",
         image: "curso4.jpg",
@@ -114,6 +128,7 @@ export const productos = [
     {
         id: 15,
         name: "YOGA BOWSPRING",
+        category: "avanzado",
         price: "400",
         description: "Curso de YOGA BOWSPRING",
         image: "curso5.jpg",
@@ -122,6 +137,7 @@ export const productos = [
     {
         id: 16,
         name: "YOGA CENTRO",
+        category: "principiante",
         price: "500",
         description: "No es ningún secreto que el yoga aporta múltiples beneficios y que se está posicionando como una de las rutinas de actividad física más consultadas y demandadas. Frente a frenéticas prácticas como el CrossFit o el HIIT, hay quien busca una disciplina más tranquila, que le permita desconectar y a la vez trabajar su cuerpo. El yoga es una opción perfecta en este supuesto, que combina respiración con espacios meditativos, a la vez que movimientos en forma de postura (asanas) encaminados también a fortalecer la musculatura",
         image: "curso6.jpg",
@@ -130,6 +146,7 @@ export const productos = [
     {
         id: 17,
         name: "YOGA BOWSPRING",
+        category: "intermedio",
         price: "400",
         description: "Curso de YOGA BOWSPRING",
         image: "curso5.jpg",
@@ -138,6 +155,7 @@ export const productos = [
     {
         id: 18,
         name: "YOGA CENTRO",
+        category: "avanzado",
         price: "500",
         description: "Curso YOGA PARA TU CENTRO",
         image: "curso6.jpg",
