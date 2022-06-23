@@ -1,7 +1,8 @@
 import { useState } from "react"
 
-function ItemCount  ({stock }) {
+const  ItemCount  = ({stock, initial, onAdd})  => {
     const [contador, setContador] = useState(0);
+    
 
     const aumentarContador = () => {
         if (contador < stock) {
@@ -13,9 +14,10 @@ function ItemCount  ({stock }) {
             setContador(contador - 1);
         }
     }
-    const comprar = () => {
+    const comprar = (e) => {
         alert (`Has comprado ${contador} cursos`)
-        setContador(0);
+        
+        onAdd(contador);
     }
 
     return (
