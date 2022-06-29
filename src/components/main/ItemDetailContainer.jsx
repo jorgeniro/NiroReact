@@ -28,7 +28,6 @@ useEffect(() => {
 
         return (
           <div className="container">
-              
               {cargando ? <Cargando/> : <ItemDetail {...product} />}
           </div>
     )
