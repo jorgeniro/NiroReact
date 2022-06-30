@@ -22,7 +22,7 @@ const ItemListContainer = ({ greeting }) => {
     new Promise((res, rej) => {
       setTimeout(() => {
         res(category ? productos.filter((producto)=>{
-          return producto.category == category
+          return producto.category === category
         }) : productos)
       }, 2000)
     })

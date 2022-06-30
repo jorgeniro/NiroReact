@@ -1,7 +1,7 @@
 import { useState } from "react"
 
-const  ItemCount  = ({stock, initial, onAdd})  => {
-    const [contador, setContador] = useState(0);
+const  ItemCount  = ({stock, initial, onAdd, onVaciar, onVaciarCarrito})  => {
+    const [contador, setContador] = useState(initial);
     
 
     const aumentarContador = () => {
@@ -14,21 +14,18 @@ const  ItemCount  = ({stock, initial, onAdd})  => {
             setContador(contador - 1);
         }
     }
-    const comprar = (e) => {
-        alert (`Has comprado ${contador} cursos`)
-        
-        onAdd(contador);
-    }
+   
 
     return (
         <div>
             <p className="count">Cantidad de cursos seleccionados : {contador}</p>
             <button className="btn" onClick={aumentarContador}>+</button>
             <button className="btn" onClick={disminuirContador}>-</button>
-            <p className="count">Stock de cursos : {stock - contador}</p>
+           
             <br></br>   
-            { contador > 0 ? <button className="vaciar" onClick={() => setContador(0)}>Vaciar</button> : null }
-            { contador > 0 ? <button className="vaciar" onClick={() => comprar()}>Comprar</button> : null }
+           <button className="vaciar" onClick={() => onVaciar(contador)}>Quitar del carrito</button>
+          <button className="vaciar" onClick={() => onVaciarCarrito(contador)}>Vaciar carrito</button>
+          <button className="vaciar" onClick={() => onAdd(contador)}>Comprar</button>
         </div>
     )
 }

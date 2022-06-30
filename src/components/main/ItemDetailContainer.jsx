@@ -28,7 +28,7 @@ useEffect(() => {
 
         return (
           <div className="container">
-              {cargando ? <Cargando/> : <ItemDetail {...product} />}
+              {cargando ? <Cargando/> : <ItemDetail product={product} />}
           </div>
     )
 }

@@ -85,6 +85,7 @@ h1, h3, h4, p{
     width: 100%;
     margin: auto;
     padding: 20px;
+    justify-content: center;
 }
 .container h2{
     font-size: 1.5rem;
@@ -103,6 +104,13 @@ h1, h3, h4, p{
     margin-bottom: 20px;
     padding: 20px;
     text-align: center;
+}
+
+.container__titulo {
+    text-align: center;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .seleccionado button {
