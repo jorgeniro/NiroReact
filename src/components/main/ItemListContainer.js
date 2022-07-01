@@ -24,7 +24,7 @@ const ItemListContainer = ({ greeting }) => {
         res(category ? productos.filter((producto)=>{
           return producto.category === category
         }) : productos)
-      }, 2000)
+      }, 100)
     })
       .then(resultado => {
         setItems(resultado)

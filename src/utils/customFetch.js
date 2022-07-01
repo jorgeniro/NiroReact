@@ -4,7 +4,7 @@ export const customFetch = () => {
     return new Promise ((resolve) => {
         setTimeout(()=> {
             resolve(productos);
-        }, 600)
+        }, 100)
     })
 }
 
@@ -12,6 +12,6 @@ export const getProductsById = (id) => {
     return new Promise (resolve => {
         setTimeout(() => {
             resolve(productos.find(prod => prod.id === id))
-        }, 500)
+        }, 100)
     })
 }

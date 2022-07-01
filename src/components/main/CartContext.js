@@ -7,7 +7,7 @@ export const CartProvider = (props) =>{
     const [cart, setCart] = useState([]);
 
     const clearCart = () => setCart([]);
-    const removeItem = (id) => setCart(cart.filter(item => item.id !== id));
+    const removeItem = id => setCart(cart.filter(item => item.id !== id));
     const isInCart = (id) => cart.some(item => item.id === id);
 
     const addToCart = (item, quantity) => {
@@ -24,7 +24,7 @@ export const CartProvider = (props) =>{
     };
 
     console.log(cart)
-    
+
     return(
         <>
             <CartContext.Provider value={{
