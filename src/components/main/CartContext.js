@@ -22,6 +22,19 @@ export const CartProvider = (props) =>{
             setCart(prev => [...prev, {...item, quantity}]);
         }
     };
+    function getTotal(){
+        return cart.reduce((actual, {price, quantity}) => actual + price * quantity, 0);
+    }
+    
+    console.log (getTotal())
+
+    function cartLenght(){
+        let cantidad = 0;
+        cart.forEach(i=>{
+            cantidad = cantidad + i.count;
+        })
+        return(cantidad)
+    }
 
     console.log(cart)
 
@@ -31,6 +44,8 @@ export const CartProvider = (props) =>{
                 cart,
                 setCart,
                 clearCart,
+                cartLenght,
+                getTotal,
                 addToCart,
                 removeItem}}>
                 {props.children}

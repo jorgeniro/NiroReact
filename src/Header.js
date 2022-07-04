@@ -9,7 +9,7 @@ const Header = () => {
         <header className="head"> 
             <Logo/>
             <NavBar/>
-           <CartWidget/>
+            <CartWidget/>
         </header>
     )
 }
